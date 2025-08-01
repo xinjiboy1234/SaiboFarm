@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "SaiboNiuMa (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "SaiboNiuMa (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
