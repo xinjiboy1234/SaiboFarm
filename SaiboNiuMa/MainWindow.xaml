@@ -6,6 +6,8 @@
     xmlns:local="using:SaiboNiuMa"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:converters ="using:SaiboNiuMa.Converters"
+    xmlns:vm ="using:Saibo.ViewModel"
     mc:Ignorable="d"
     Title="SaiboNiuMa">
 
@@ -14,7 +16,7 @@
     </Window.SystemBackdrop>
 
     <Grid>
-        <!--<Grid.Resources>
+        <Grid.Resources>
             <converters:MenuItemTemplateSelector x:Key="selector">
                 <converters:MenuItemTemplateSelector.ItemTemplate>
                     <DataTemplate>
@@ -59,11 +61,11 @@
             SelectedItem="{x:Bind MainWindowViewModel.SelectedItem, Mode=TwoWay}"
             MenuItemsSource="{x:Bind MainWindowViewModel.Menus, Mode=OneWay}">
             <NavigationView.Resources>
-                --><!--  This top margin is the height of the custom titleBar  --><!--
+                This top margin is the height of the custom titleBar
                 <Thickness x:Key="NavigationViewContentMargin">0,48,0,0</Thickness>
                 <Thickness x:Key="NavigationViewMinimalContentMargin">0,48,0,0</Thickness>
                 <Thickness x:Key="NavigationViewContentGridBorderThickness">1,1,0,0</Thickness>
-                --><!--  This is the rounded corner on the Top left of the L Pattern  --><!--
+                This is the rounded corner on the Top left of the L Pattern
                 <CornerRadius x:Key="NavigationViewContentGridCornerRadius">8,0,0,0</CornerRadius>
             </NavigationView.Resources>
 
@@ -94,6 +96,6 @@
                     </DataTemplate>
                 </TabView.TabItemTemplate>
             </TabView>
-        </NavigationView>-->
+        </NavigationView>
     </Grid>
 </Window>

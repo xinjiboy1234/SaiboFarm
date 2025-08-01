@@ -1,4 +1,4 @@
-﻿namespace Saibo.ViewModel
+﻿namespace Saibo.DataService
 {
     public class Class1
     {
