@@ -9,7 +9,7 @@ namespace SaiboNiuMa.Caches
 {
     internal static class MenuCache
     {
-        internal static Dictionary<string, string> MenuMap = [];
+        internal static Dictionary<string, Type> MenuMap = [];
 
         //MenuMap[type.Name] = () => (Page) Activator.CreateInstance(type);
 
@@ -21,7 +21,7 @@ namespace SaiboNiuMa.Caches
                 .SelectMany(a =>
                 {
                     try { return a.GetTypes(); }
-                    catch { return Array.Empty<Type>(); } // 忽略反射错误的程序集
+                    catch { return []; } // 忽略反射错误的程序集
                 })
                 .Where(t =>
                     interfaceType.IsAssignableFrom(t) &&
@@ -34,7 +34,7 @@ namespace SaiboNiuMa.Caches
             {
                 try
                 {
-                    MenuMap[type.Name] = type.FullName;
+                    MenuMap[type.Name] = type;
                 }
                 catch (Exception ex)
                 {

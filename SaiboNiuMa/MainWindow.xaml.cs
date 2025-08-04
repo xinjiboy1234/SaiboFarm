@@ -54,7 +54,7 @@ namespace SaiboNiuMa
                         Glyph = m.Glyph,
                         Tooltip = m.Tooltip,
                         PageName = m.PageName,
-                        PageType = Type.GetType(pt)
+                        PageType = pt
                     };
                     temp.Menus.Add(menuViewModel);
                 }

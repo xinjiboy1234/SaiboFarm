@@ -8,6 +8,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Pages\HomePage.xaml" />
+    <None Remove="Pages\UpdateMindExpressPage.xaml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.4654" />
@@ -15,6 +16,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Saibo.ViewModel\Saibo.ViewModel.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Pages\UpdateMindExpressPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Pages\HomePage.xaml">

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Page
-    x:Class="SaiboNiuMa.UI.Pages.HomePage"
+    x:Class="SaiboNiuMa.UI.Pages.UpdateMindExpressPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:SaiboNiuMa.UI.Pages"
@@ -8,7 +8,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Padding="8">
-        <TextBlock Text="Welcome, XinjiBoy" Style="{StaticResource TitleLargeTextBlockStyle}"></TextBlock>
+    <Grid>
+        
+        
     </Grid>
 </Page>

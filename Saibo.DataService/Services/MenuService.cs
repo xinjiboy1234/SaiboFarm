@@ -12,9 +12,9 @@ namespace Saibo.DataService.Services
         public async Task<List<Menu>> GetMenusAsync()
         {
             var menuList = new List<Menu>();
-            Menu firstCategory = new Menu { Name = "Home", Glyph = "Home", Tooltip = "This is category 1", PageName = "HomePage" };
+            Menu firstCategory = new Menu { Name = "Home", Glyph = "Home", Tooltip = "Home", PageName = "HomePage" };
             menuList.Add(firstCategory);
-            menuList.Add(new Menu { Name = "Category 2", Glyph = "Keyboard", Tooltip = "This is category 2", PageName = "SendBotMessagePage" });
+            menuList.Add(new Menu { Name = "UpdateMindExpress", Glyph = "Keyboard", Tooltip = "Update MindExpress", PageName = "UpdateMindExpressPage" });
             menuList.Add(new Menu { Name = "Category 3", Glyph = "Library", Tooltip = "This is category 3", PageName = "HomePage" });
             menuList.Add(new Menu { Name = "Category 4", Glyph = "Mail", Tooltip = "This is category 4", PageName = "SendBotMessagePage" });
 
