@@ -13,7 +13,7 @@
 		<Nullable>enable</Nullable>
 
 		<!--unpackaged 调试必须添加-->
-		<WindowsPackageType>None</WindowsPackageType>
+		<!--<WindowsPackageType>None</WindowsPackageType>-->
 	</PropertyGroup>
 
 	<ItemGroup>

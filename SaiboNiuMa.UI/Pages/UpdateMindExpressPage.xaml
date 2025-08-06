@@ -9,7 +9,31 @@
     mc:Ignorable="d">
 
     <Grid>
-        
-        
+        <StackPanel>
+            <!-- 表头 -->
+            <Grid ColumnDefinitions="60,2*,120, 120" Background="#EEE" Padding="6">
+                <CheckBox Grid.Column="0" Name="SelectAll"></CheckBox>
+                <TextBlock Grid.Column="1" Text="Name" FontWeight="Bold"/>
+                <TextBlock Grid.Column="2" Text="Age" FontWeight="Bold"/>
+                <TextBlock Grid.Column="3" Text="Country" FontWeight="Bold"/>
+            </Grid>
+
+            <!-- 表体 -->
+            <ItemsRepeater x:Name="itemsRepeater" ItemsSource="{x:Bind Data}">
+                <ItemsRepeater.ItemTemplate>
+                    <!-- 注意指定 x:DataType 以便 x:Bind 在模板中工作 -->
+                    <DataTemplate x:DataType="local:Person">
+                        <Grid ColumnDefinitions="60,2*,120, 120" Padding="6">
+                            <CheckBox Grid.Column="0" IsChecked="{x:Bind IsSelected}"></CheckBox>
+                            <TextBlock Grid.Column="1" Text="{x:Bind Name}" />
+                            <TextBlock Grid.Column="2" Text="{x:Bind Age}"/>
+                            <TextBlock Grid.Column="3" Text="{x:Bind Country}"/>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsRepeater.ItemTemplate>
+            </ItemsRepeater>
+        </StackPanel>
+
+
     </Grid>
 </Page>

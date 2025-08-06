@@ -8,6 +8,7 @@ using Microsoft.UI.Xaml.Navigation;
 using SaiboNiuMa.UI.MarkupInterfaces;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -24,9 +25,23 @@ namespace SaiboNiuMa.UI.Pages
     /// </summary>
     public sealed partial class UpdateMindExpressPage : Page, IMarkUpMenu
     {
+        public ObservableCollection<string> ColumnHeaders { get; } = new() { "Name", "Age", "Country" };
+        public ObservableCollection<Person> Data { get; } = new();
         public UpdateMindExpressPage()
         {
             InitializeComponent();
+            // 预填数据（也可以在构造前初始化，但确保类型正确）
+            Data.Add(new Person { Name = "Alice", Age = 25, Country = "USA" });
+            Data.Add(new Person { Name = "Bob", Age = 30, Country = "UK" });
+            Data.Add(new Person { Name = "Charlie", Age = 28, Country = "Canada" });
         }
+    }
+
+    public class Person
+    {
+        public bool IsSelected { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public string Country { get; set; }
     }
 }
